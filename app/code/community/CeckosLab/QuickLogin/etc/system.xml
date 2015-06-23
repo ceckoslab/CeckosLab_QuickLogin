@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      Tsvetan Stoychev <ceckoslab@gmail.com>
+ * @website     http://www.ceckoslab.com
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ */
+-->
+<config>
+    <sections>
+        <dev translate="label" module="ceckoslab_quicklogin">
+            <groups>
+                <quicklogin translate="label">
+                    <label>Quick Login</label>
+                    <sort_order>755</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <autologin_admin_username translate="label">
+                            <label>Admin Autologin Username:</label>
+                            <comment>You will be always logged in with this username if the autologin feature is enabled.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceckoslab_quicklogin/source_adminUsername</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </autologin_admin_username>
+                    </fields>
+                </quicklogin>
+            </groups>
+        </dev>
+    </sections>
+</config>

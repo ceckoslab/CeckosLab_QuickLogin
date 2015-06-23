@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      Tsvetan Stoychev <ceckoslab@gmail.com>
+ * @website     http://www.ceckoslab.com
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ */
+-->
+<config>
+	<modules>
+		<CeckosLab_QuickLogin>
+			<version>1.0.0</version>
+		</CeckosLab_QuickLogin>
+	</modules>
+	<global>
+		<models>
+			<ceckoslab_quicklogin>
+				<class>CeckosLab_QuickLogin_Model</class>
+			</ceckoslab_quicklogin>
+		</models>
+        <helpers>
+			<ceckoslab_quicklogin>
+				<class>CeckosLab_QuickLogin_Helper</class>
+			</ceckoslab_quicklogin>
+		</helpers>
+	</global>
+    <global>
+        <events>
+			<adminhtml_controller_action_predispatch_start>
+				<observers>
+					<ceckoslab_quicklogin_autologin>
+						<type>singleton</type>
+						<class>ceckoslab_quicklogin/observer</class>
+						<method>adminAutoLogin</method>
+					</ceckoslab_quicklogin_autologin>
+				</observers>
+			</adminhtml_controller_action_predispatch_start>
+		</events>
+	</global>
+</config>
