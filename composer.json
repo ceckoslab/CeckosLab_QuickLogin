@@ -1,0 +1,14 @@
+{
+  "name": "ceckoslab/quicklogin",
+  "license": "GPL-3.0",
+  "type": "magento-module",
+  "description": "Magento developer extension that automatically logs the developer in Magento admin",
+  "homepage": "https://github.com/ceckoslab/CeckosLab_QuickLogin",
+  "authors":[
+    {
+      "name":"ceckoslab",
+      "email":"contact@ceckoslab.com"
+    }
+  ]
+}
+
